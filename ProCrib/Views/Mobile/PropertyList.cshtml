@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ProCrib.ApplicationLogic.ViewModels.Properties.PropertyViewModel>
+
+<a class="btn btn-outline-secondary col-5" asp-area="" asp-controller="Mobile" asp-action="PropertyList">
+    Join
+</a>
+
+<a class="btn btn-outline-secondary col-5 float-right" asp-area="" asp-controller="Property" asp-action="Create">
+    Add New
+</a>
+
+<ul class="list-group">
+    @foreach (var property in Model)
+    {
+        <li class="list-group-item border border-left-0 border-right-0">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Mobile" asp-action="Mine">
+                <i class="fa fa-building-o" style="font-size: 17px"></i>
+                <span class="m-2">@property.Name</span>
+            </a>
+        </li>
+    }
+</ul>

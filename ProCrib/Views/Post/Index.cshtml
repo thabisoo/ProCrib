@@ -1,0 +1,38 @@
+﻿@model ProCrib.ApplicationLogic.ViewModels.Posts.PostListViewModel
+
+<a class="card nav-link text-dark mb-3" asp-area="" asp-controller="Post" asp-action="NewPost">
+    <div class="card-body p-1">
+        <img src="~/images/images.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px;">
+        <span class="ml-2">What's happening at @Model.Property.Name..</span>
+    </div>
+</a>
+
+@foreach (var post in Model.Posts)
+{
+<div class="card mb-3 shadow bg-white rounded">
+    <div class="card-body pb-0">
+        <div class="card-title">
+            <img src="~/images/images.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px;">
+            @post.Username
+            <span class="float-right">@post.Date.ToString("MMMM,dd yyyy")</span>
+        </div>
+    </div>
+    <div class="card-body pt-1 pb-1">
+        @post.Body
+    </div>
+    <div class="card-body pt-1 pb-1">
+        @if (post.Likes > 0)
+        {
+            <div class="col-5 float-left">@post.Likes Likes</div>
+        }
+        @if (post.Comments > 0)
+        {
+            <div class="col-5 float-right">@post.Comments Comments</div>
+        }
+    </div>
+    <div class="card-body pt-1 pb-1">
+        <div class="col-5 float-left"><i class="fa fa-thumbs-up"></i> Like</div>
+        <div class="col-5 float-right"><i class="fa fa-comment"></i> Comment</div>
+    </div>
+</div>
+}

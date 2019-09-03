@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ProCrib.ApplicationLogic.ViewModels.Adverts.AdvertViewModel>
+
+@foreach (var advert in Model)
+{
+<div class="card mb-3 shadow p-1 bg-white rounded">
+    <div class="card-body">
+        <div class="col-4 float-left">
+            <img src="~/images/images.png" height="100" />
+        </div>
+        <div class="col-8 float-right">
+            <span class="h5">@advert.Title</span>
+            <p class="h4 text-info m-0">R @advert.Price</p>
+            <p class="m-0">@advert.Description</p>
+            <p class="m-0"><i class="fa fa-map-marker"></i> Durban Central</p>
+            <p class="m-0"><i class="fa fa-eye"></i>27</p>
+            <p class="float-left"><i class="fa fa-building-o"> Kingsford</i></p>
+            <p class="float-right">@advert.UpdatedAt.ToString("MMMM,dd yyyy")</p>
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,25 @@
+﻿@model ProCrib.ApplicationLogic.ViewModels.Posts.PostViewModel
+
+
+<div class="card-body p-1">
+    <img src="~/images/images.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px;">
+    <span class="ml-2">Thabiso Motsoko</span>
+</div>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div asp-validation-summary="All" class="alert alert-danger"></div>
+}
+
+<form asp-controller="Post" asp-action="NewPost" method="post">
+    <div class="form-group row">
+        <label for="post" class="col-sm-2 col-form-label">Share you thoughts</label>
+        <div class="col-sm-10">
+            <textarea asp-for="Body" style="resize: none;" rows="6" class="form-control" id="post" required></textarea>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-sm btn-outline-secondary col-12 mb-2"><i class="fa fa-camera"></i></button>
+    <button type="submit" class="btn btn-sm btn-secondary col-12">Post</button>
+</form>
+
