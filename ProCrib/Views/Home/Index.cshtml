@@ -1,16 +1,8 @@
-﻿@model IEnumerable<ProCrib.ApplicationLogic.ViewModels.Properties.PropertyViewModel>
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
-<ul class="list-group d-block d-sm-none">
-    @foreach (var property in Model)
-    {
-        <li class="list-group-item border border-left-0 border-right-0">
-            <a class="nav-link text-dark" href="properties/@property.Id">
-                <span class="m-2">@property.Name</span>
-            </a>
-        </li>
-    }
-</ul>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

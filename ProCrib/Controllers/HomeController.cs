@@ -4,33 +4,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ProCrib.ApplicationLogic.Interfaces.Services;
-using ProCrib.ApplicationLogic.ViewModels.Properties;
+using Microsoft.Extensions.Logging;
 using ProCrib.Models;
 
 namespace ProCrib.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IPropertyService _propertyService;
+        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(IPropertyService propertyService)
+        public HomeController(ILogger<HomeController> logger)
         {
-            _propertyService = propertyService;
+            _logger = logger;
         }
 
         public IActionResult Index()
         {
-            var properties = _propertyService.GetAllPropertyAsync();
-
-            var result = properties.Select(p => new PropertyViewModel
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description
-            });
-
-            return View(result);
+            return View();
         }
 
         public IActionResult Privacy()

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProCrib.Domain", "ProCrib.Domain\ProCrib.Domain.csproj", "{D5699BA4-D41A-4FC7-9537-A641A03D1337}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProCrib.Data", "ProCrib.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProCrib.ApplicationLogic", "ProCrib.ApplicationLogic\ProCrib.ApplicationLogic.csproj", "{0EF84B5E-44C6-4AAB-951E-3BF79BB9D591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProCrib", "ProCrib\ProCrib.csproj", "{59B378BB-5DBD-450B-AB49-D90ABF66A558}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProCrib-deleted", "ProCrib\ProCrib-deleted.csproj", "{59B378BB-5DBD-450B-AB49-D90ABF66A558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProCrib", "ProCrib\ProCrib.csproj", "{A10FB4A6-061C-4B2A-9E40-2BA91BA53F67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{59B378BB-5DBD-450B-AB49-D90ABF66A558}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59B378BB-5DBD-450B-AB49-D90ABF66A558}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59B378BB-5DBD-450B-AB49-D90ABF66A558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10FB4A6-061C-4B2A-9E40-2BA91BA53F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10FB4A6-061C-4B2A-9E40-2BA91BA53F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10FB4A6-061C-4B2A-9E40-2BA91BA53F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10FB4A6-061C-4B2A-9E40-2BA91BA53F67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
