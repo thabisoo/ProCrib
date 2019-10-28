@@ -12,6 +12,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProCrib.Data;
+using ProCrib.ApplicationLogic.Interfaces.Services;
+using ProCrib.Domain;
+using ProCrib.ApplicationLogic.Services;
+using ProCrib.Data.Repositories;
 
 namespace ProCrib
 {
@@ -34,6 +38,11 @@ namespace ProCrib
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddScoped<IPropertyService, PropertyService>();
+            services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IAdvertService, AdvertService>();
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

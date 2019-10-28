@@ -22,7 +22,10 @@ namespace ProCrib.ApplicationLogic.Services
         public async Task<PropertyEntity> AddPropertyAsync(PropertyEntity propertyEntity)
         {
             if (string.IsNullOrWhiteSpace(propertyEntity.Name))
+            {
                 throw new ArgumentNullException("Property name can not be empty");
+            }
+                
 
             var property = new Property
             {
@@ -69,6 +72,11 @@ namespace ProCrib.ApplicationLogic.Services
                 Name = property.Name,
                 Description = property.Description
             };
+        }
+
+        public IEnumerable<PropertyEntity> GetUserProperties()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,6 +12,8 @@ namespace ProCrib.ApplicationLogic.Interfaces.Services
 
         PropertyEntity GetPropertyAsync(PropertyEntity propertyEntity);
 
+        IEnumerable<PropertyEntity> GetUserProperties();
+
         IEnumerable<PropertyEntity> GetAllPropertyAsync();
     }
 }

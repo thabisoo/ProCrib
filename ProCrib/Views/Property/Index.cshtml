@@ -1,0 +1,36 @@
+﻿@model ProCrib.ApplicationLogic.ViewModels.Properties.ListPropertiesViewModel
+
+@{
+    ViewBag.Title = "My Properties";
+    int counter = 0;
+}
+
+<button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#myModal">
+    Add New
+</button>
+
+<partial name="_Create" model="Model.AddProperty" />
+
+<div class="row">
+    @foreach (var property in Model.Properties)
+    {
+
+        if (counter != 0 && counter % 3 == 0)
+        {
+            @:</div>
+            @:<div class="row">
+        }
+        
+        <div class="col-md-4 mb-2">
+            <div class="card mr-2 shadow p-3 bg-white rounded" style="height: 200px; cursor: pointer;">
+                <div class="card-body">
+                    <h5 class="card-title">@property.Name</h5>
+
+                </div>
+
+            </div>
+        </div>
+
+        counter++;
+    }
+</div>
